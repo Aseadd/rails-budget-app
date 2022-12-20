@@ -9,24 +9,32 @@ class PaymentsController < ApplicationController
   end
 
   def new
+    @categories = Category.where(user: current_user)
     @payment = Payment.new
   end
 
   def create
-    @payment = Payment.new(payment_params)
-    @payment.user = current_user
-    @category = Category.find(params[:category_id])
-    @category.payments<< @payment
+    name = payment_params[:name]
+    amount = payment_params[:amount]
 
-    respond_to do |format|
-      if @exchange.save
-        format.html { redirect_to category_payments_path(@category), notice: 'Transaction was successfully created.' }
-        format.json { render :show, status: :created, location: @payment }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @payment.errors, status: :unprocessable_entity }
-      end
-    end
+    @payment = Payment.new(name: name, amount: amount)
+    @payment.user = current_user
+    @category = Category.find(payment_params[:category_id])
+    @payment.categories = [@category]
+
+    puts @payment
+    puts @category
+    puts @payment.valid?
+
+    # respond_to do |format|
+    #   if @exchange.save
+    #     format.html { redirect_to category_payments_path(@category), notice: 'Transaction was successfully created.' }
+    #     format.json { render :show, status: :created, location: @payment }
+    #   else
+    #     format.html { render :new, status: :unprocessable_entity }
+    #     format.json { render json: @payment.errors, status: :unprocessable_entity }
+    #   end
+    # end
   end
 
   private
@@ -36,6 +44,6 @@ class PaymentsController < ApplicationController
   end
 
   def payment_params
-    params.require(:payment).permit(:name, :amount)
+    params.require(:payment).permit(:name, :amount, :category_id)
   end
 end

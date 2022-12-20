@@ -1,7 +1,7 @@
 class Category < ApplicationRecord
     belongs_to :user
     has_many :categories_payments
-    has_many :payments, through: :categories_payments
+    has_many :payments, through: :categories_payments, source: :payment
 
     validates :name, presence: true, length: { minimum: 2, maximum: 50 }
 
