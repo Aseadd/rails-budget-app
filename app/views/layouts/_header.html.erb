@@ -1,0 +1,23 @@
+<% stylesheet_link_tag "header"%>
+
+<header>
+    <div class="logo">
+        <h1> Budget App</h1>
+    </div>
+    <nav>
+    
+    <% if user_signed_in? %>
+        <div class="nav-item" >
+            <%= link_to "Categories" , categories_path %>
+        </div>
+        
+        <div class="nav-item" >
+            <%= link_to "My Profile" , edit_user_registration_path %>
+        </div>
+        <div class="nav-item">
+            <%= button_to "Log out" , destroy_user_session_path, method: :delete, class: "log-out-btn" %>
+        </div>
+    
+    <% end %>
+    </nav>
+</header>

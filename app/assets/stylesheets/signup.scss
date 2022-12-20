@@ -1,0 +1,129 @@
+.register-header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 3rem;
+    background: #2a5e8c;
+    margin-bottom: 0.5em;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: left;
+
+    .back-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 10%;
+        height: 100%;
+        background: #2a5e8c;
+        border-radius: 10px;
+        text-align: center;
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .title {
+        display: flex;
+        align-items: center;
+        width: 90%;
+        height: 100%;
+        background: #2a5e8c;
+        border-radius: 10px;
+        text-align: center;
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+}
+
+.form {
+    margin: 0 auto;
+    width: 100%;
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+
+    h2 {
+        margin-bottom: 0.5em;
+        font-size: 1.5em;
+        font-weight: bold;
+        text-align: center;
+
+    }
+
+    input {
+        display: block;
+        width: 100%;
+        margin-bottom: 0.5em;
+        padding: 0.5em;
+        background: #fff;
+        border: 1px solid #4E6E5D;
+        border-radius: 0.5em;
+        font-size: 1em;
+    }
+
+    input :hover {
+        border: 1px solid #3778c2;
+    }
+
+    input :focus {
+        outline: none;
+        border: 1px solid #DB162F;
+    }
+
+    label {
+        display: block;
+    }
+
+    input[type="submit"] {
+        display: block;
+        width: 100%;
+        padding: 0.5em;
+        background: #3778c2;
+        border: none;
+        border-radius: 0.5em;
+        color: #fff;
+        font-size: 1em;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    input[type="submit"]:hover {
+        background: #2a5e8c;
+    }
+
+    input[type="submit"]:focus {
+        outline: none;
+    }
+
+    input[type="submit"]:active {
+        background: #2a5e8c;
+    }
+
+    input[type="submit"]:disabled {
+        background: #ccc;
+    }
+
+    input[type="submit"]:disabled:hover {
+        background: #ccc;
+    }
+
+    input[type="submit"]:disabled:focus {
+        background: #ccc;
+    }
+
+    input[type="submit"]:disabled:active {
+        background: #ccc;
+    }
+
+    .login-page-link {
+        font-size: 16px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #011936;
+        text-align: center;
+    }
+}

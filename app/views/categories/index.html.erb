@@ -1,0 +1,20 @@
+<p style="color: green"><%= notice %></p>
+
+<section class="category-page">
+  <h1>Categories</h1>
+  <ul class="category-nav">
+    <li> <%= link_to "Most Recent", @recent_categories, class: "menu-text"%> </li>
+    <li> <%= link_to "Most Ancient", @ancient_categories, class: "menu-text"%> </li>
+  </ul>
+
+<div id="categories">
+  <% @categories.each do |category| %>
+    <%= render category %>
+    <p>
+      <%= link_to "Show this category", category %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New category", new_category_path %>
+</section>
