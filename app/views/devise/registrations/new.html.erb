@@ -1,12 +1,14 @@
+
 <%= stylesheet_link_tag "signup"%>
 <div class="register-header">
-  <%= link_to "Back", splash_index_path, class: "back-link" %>
+  <h1 class="back-link"> <%= link_to(splash_index_path) do %>
+    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+    <% end %>
+  </h1>
   <h1 class="title">Register</h1>
 </div>
 
 <div class="form">
-<h2>Register</h2>
-
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
@@ -37,6 +39,7 @@
     <%= f.submit "Sign up", class: "btn" %>
   </div>
 <% end %>
-
-<%= render "devise/shared/links", class: "login-page-link"%>
+<div class="devise-shared-links">
+  <%= render "devise/shared/links", class: "login-page-link"%>
+</div>
 </div>
