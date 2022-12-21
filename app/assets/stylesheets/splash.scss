@@ -1,81 +1,77 @@
 .main-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  .app-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60vh;
+    background: #3778c2;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    font-family: 'proxima-nova', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .login-signup-link {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
     width: 100%;
-    height: 100%;
-    background: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
-    box-shadow: 0 1px 1px rgba(0,0,0,.05);
-    text-align: center;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+    height: 20vh;
 
-
-    .app-title {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 60vh;
-        background: #3778c2;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        border-radius: 10px;
-        text-align: center;
-        color: #fff;
-        font-family: 'proxima-nova', sans-serif;
-        font-size: 24px;
-        font-weight: bold;
-        text-decoration: none;
+    .login-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 50%;
+      background: #3778c2;
+      border-radius: 10px;
+      text-align: center;
+      color: #fff;
+      font-size: 20px;
+      font-weight: bold;
+      text-decoration: none;
     }
 
-    .login-signup-link {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 20vh;
-
-        .login-link {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: 50%;
-            background: #3778c2;
-            border-radius: 10px;
-            text-align: center;
-            color: #fff;
-            font-size: 20px;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        .signup-link {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: 50%;
-            background: #fff;
-            border-radius: 10px;
-            text-align: center;
-            color: #3778c2;
-            font-size: 20px;
-            font-weight: bold;
-            text-decoration: none;
-        }
+    .signup-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 50%;
+      background: #fff;
+      border-radius: 10px;
+      text-align: center;
+      color: #3778c2;
+      font-size: 20px;
+      font-weight: bold;
+      text-decoration: none;
     }
-
+  }
 }
-    
-

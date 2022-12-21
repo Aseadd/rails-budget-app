@@ -14,7 +14,7 @@ class PaymentsController < ApplicationController
     name = payment_params[:name]
     amount = payment_params[:amount]
 
-    @payment = Payment.new(name: name, amount: amount)
+    @payment = Payment.new(name:, amount:)
     @payment.user = current_user
     @category = Category.find(payment_params[:category_id])
     @payment.categories = [@category]
