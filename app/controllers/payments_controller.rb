@@ -2,10 +2,7 @@ class PaymentsController < ApplicationController
   before_action :set_payment, only: %i[show edit update destroy]
 
   def index
-    @category = Category.find(params[:category_id])
-    @payments = @category.payments.order(created_at: :desc)
-
-    redirect_to new_user_session_path, notice: 'Can not access this ressource' if @category.user != current_user
+    @payments = Payment.all.order(created_at: :desc)
   end
 
   def new
@@ -26,15 +23,15 @@ class PaymentsController < ApplicationController
     puts @category
     puts @payment.valid?
 
-    # respond_to do |format|
-    #   if @exchange.save
-    #     format.html { redirect_to category_payments_path(@category), notice: 'Transaction was successfully created.' }
-    #     format.json { render :show, status: :created, location: @payment }
-    #   else
-    #     format.html { render :new, status: :unprocessable_entity }
-    #     format.json { render json: @payment.errors, status: :unprocessable_entity }
-    #   end
-    # end
+    respond_to do |format|
+      if @payment.save
+        format.html { redirect_to payments_path(@category), notice: 'Transaction was successfully created.' }
+        format.json { render :show, status: :created, location: @payment }
+      else
+        format.html { render :new, status: :unprocessable_entity }
+        format.json { render json: @payment.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   private
