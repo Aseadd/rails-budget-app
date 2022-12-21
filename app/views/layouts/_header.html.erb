@@ -1,4 +1,17 @@
 <% stylesheet_link_tag "header"%>
+<section class="mobile-header">
+<nav class="hamburger-menu">
+    <div class="hamburger-menu__line hamburger-menu__line--top"></div>
+    <div class="hamburger-menu__line hamburger-menu__line--middle"></div>
+    <div class="hamburger-menu__line hamburger-menu__line--bottom"></div>
+</nav>
+
+    <% if user_signed_in? %>
+        <div class="nav-item">
+            <%= button_to "Log out" , destroy_user_session_path, method: :delete, class: "log-out-btn" %>
+        </div>
+    <% end %>
+</section>
 
 <header>
     <div class="logo">
