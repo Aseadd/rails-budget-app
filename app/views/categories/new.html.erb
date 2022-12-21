@@ -1,9 +1,10 @@
-<h1>New category</h1>
+<%= stylesheet_link_tag "signup"%>
+<div class="register-header">
+  <h1 class="back-link"> <%= link_to(categories_path) do %>
+    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+    <% end %>
+  </h1>
+  <h1 class="title">New Category </h1>
+</div>
 
 <%= render "form", category: @category %>
-
-<br>
-
-<div>
-  <%= link_to "Back to categories", categories_path %>
-</div>

@@ -13,7 +13,6 @@ class CategoriesController < ApplicationController
   def new
     @category = Category.new
   end
-
   # GET most recent categories
 
   def recent
