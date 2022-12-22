@@ -4,6 +4,7 @@ class Category < ApplicationRecord
   has_many :payments, through: :categories_payments, source: :payment
 
   validates :name, presence: true, length: { minimum: 2, maximum: 50 }
+  validates :icon, presence: true
 
   def total_amount
     total = 0

@@ -1,12 +1,11 @@
 <% stylesheet_link_tag "header"%>
 <section class="mobile-header">
+ <% if user_signed_in? %>
 <nav class="hamburger-menu">
     <div class="hamburger-menu__line hamburger-menu__line--top"></div>
     <div class="hamburger-menu__line hamburger-menu__line--middle"></div>
     <div class="hamburger-menu__line hamburger-menu__line--bottom"></div>
 </nav>
-
-    <% if user_signed_in? %>
         <div class="nav-item">
             <%= button_to "Log out" , destroy_user_session_path, method: :delete, class: "log-out-btn" %>
         </div>
@@ -14,12 +13,11 @@
 </section>
 
 <header>
+<% if user_signed_in? %>
     <div class="logo">
         <h1> Budget App</h1>
     </div>
     <nav>
-    
-    <% if user_signed_in? %>
         <div class="nav-item" >
             <%= link_to "Categories" , categories_path %>
         </div>
@@ -30,7 +28,6 @@
         <div class="nav-item">
             <%= button_to "Log out" , destroy_user_session_path, method: :delete, class: "log-out-btn" %>
         </div>
-    
-    <% end %>
     </nav>
+<% end %>
 </header>

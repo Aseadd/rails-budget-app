@@ -6,4 +6,9 @@ class User < ApplicationRecord
 
   has_many :payments
   has_many :categories
+
+  validates :name, presence: true, length: { minimum: 2, maximum: 20 }
+  validates :email, presence: true, length: { minimum: 2, maximum: 50 }
+  validates :password, presence: true, length: { minimum: 2, maximum: 50 }
+
 end

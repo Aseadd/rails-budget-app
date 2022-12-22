@@ -57,7 +57,7 @@
       grid-template-columns: 1fr 1fr 1fr 1fr;
       gap: 10px;
       width: 100%;
-      height: 100px;
+      height: 80px;
       font-size: 12px;
       padding: 0.5em;
       background: #fff;
@@ -78,7 +78,7 @@
 
       .icon {
         width: 80px;
-        height: 80px;
+        height: 70px;
         border-radius: 50%;
         background: #ccc;
         display: flex;
@@ -116,7 +116,7 @@
       align-items: center;
       text-align: center;
       width: 100%;
-      height: 80px;
+      height: 60px;
       border: 1px solid #ccc;
       border-radius: 5px;
       padding-top: 10px;
@@ -192,12 +192,10 @@
   padding: 0.5em;
   background: #fff;
   color: #000;
-  cursor: pointer;
-  transition: 0.2s;
   align-items: center;
 
   &:hover {
-    background: #ccc;
+    background: #FBD1A2;
   }
 }
 
@@ -235,7 +233,7 @@
     display: block;
     text-align: center;
     width: 100%;
-    height: 80px;
+    height: 60px;
     border: 1px solid #ccc;
     border-radius: 5px;
     padding-top: 10px;
@@ -262,6 +260,11 @@
     }
 
     .register-category {
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+      border: 2px solid #fff;
+      border-radius: 10px;  
       font-size: 16px;
 
       .category-btn {
@@ -271,6 +274,7 @@
 
     .payment-item {
       font-size: 14px;
+      margin-left: 20px;
     }
   }
 
@@ -293,4 +297,22 @@
       font-size: 1rem;
     }
   }
+
+  .register-payment {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    font-size: 16px;
+    border: 2px solid #fff;
+    border-radius: 10px; 
+    margin-left: auto;
+    margin-right: auto;
+
+    .payment-btn {
+      font-size: 18px;
+  }
+}
+
 }

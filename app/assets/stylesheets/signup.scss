@@ -44,6 +44,7 @@
   padding: 1em;
   border: 1px solid #ccc;
   border-radius: 1em;
+  box-shadow: 0 0 10px #4e6e5d;
 
   h2 {
     margin-bottom: 0.5em;
@@ -169,9 +170,10 @@
 
   .devise-shared-links {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 0.5em;
     margin-bottom: 0.5em;
     font-size: 1em;
     font-weight: bold;
@@ -243,6 +245,11 @@
 
 @media screen and (min-width: 768px) {
   .form {
-    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin-bottom: 10px;
   }
 }

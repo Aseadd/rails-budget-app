@@ -80,7 +80,7 @@
 
     a {
       all: unset;
-      color: black;
+      color: #fff;
     }
 
     .log-out-btn {
@@ -112,7 +112,7 @@ header {
 
     a {
       all: unset;
-      color: black;
+      color: #fff;
     }
 
     .logo {
@@ -127,6 +127,7 @@ header {
       justify-content: flex-end;
       gap: 1rem;
       cursor: pointer;
+      color: #fff;
 
       button {
         all: unset;

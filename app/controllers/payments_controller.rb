@@ -19,10 +19,6 @@ class PaymentsController < ApplicationController
     @category = Category.find(payment_params[:category_id])
     @payment.categories = [@category]
 
-    puts @payment
-    puts @category
-    puts @payment.valid?
-
     respond_to do |format|
       if @payment.save
         format.html { redirect_to payments_path(@category), notice: 'Transaction was successfully created.' }

@@ -1,13 +1,16 @@
 footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background-color: #3778c2;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-  font-size: 14px;
-  margin-top: 2px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #3778c2;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 5px;
 
   a {
     color: #fff;
