@@ -1,0 +1,42 @@
+<% stylesheet_link_tag "category"%>
+<p style="color: green"><%= notice %></p>
+
+<div class="recent-ancient">
+  <div class="back-link">
+    <%= link_to(categories_path) do %>
+      <i class="fa fa-arrow-left" aria-hidden="true"></i>
+    <% end %>
+  </div>
+  <div class="recent">
+    <h2 clas="recent">Most Recent</h2>
+  </div>
+  <div class="ancient">
+    <h2 clas="ancient">Most Ancient</h2>
+  </div>
+</div>
+
+<div class="category-title">
+<h1><%= @category.name.upcase_first %> </h1>
+<h1>$<%= @category.total_amount%> </h1>
+</div>
+
+<% if @category.payments.empty? %>
+  <p>There are no payments yet.</p>
+<% else %>
+
+<% @category.payments.each do |payment| %>
+  <div class="payment-item">
+    <span><%= payment.name.upcase_first %></span>
+    <span><%= payment.amount %></span>
+  </div>
+<% end %>
+<div class="total-payment">
+<span> Total Amount Spent </span>
+<span> $<%= @category.payments.sum(:amount) %> </span>
+</div>
+<% end %>
+
+<div class="register-payment">
+  <%= link_to "New payment", new_payment_path(@category), class: "payment-btn" %>
+</div>
+

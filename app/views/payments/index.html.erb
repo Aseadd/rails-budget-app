@@ -1,0 +1,34 @@
+<p style="color: green"><%= notice %></p>
+ <div class="new-payment-header">
+  <h1 class="back-link"> <%= link_to(categories_path) do %>
+      <i class="fa fa-arrow-left" aria-hidden="true"></i>
+      <% end %>
+  </h1>
+  <h1 class="title">Transactions</h1>
+</div>
+
+<div class="payments">
+  <% if @payments.empty? %>
+    <p>There are no payments yet.</p>
+  <% else %>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Amount</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @payments.each do |payment| %>
+          <tr>
+            <td><%= payment.name %></td>
+            <td><%= payment.amount %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <% end%>
+</div>
+  

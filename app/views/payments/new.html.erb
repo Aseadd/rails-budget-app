@@ -1,0 +1,10 @@
+ <%= stylesheet_link_tag "payment"%>
+ <div class="new-payment-header">
+  <h1 class="back-link"> <%= link_to(categories_path) do %>
+      <i class="fa fa-arrow-left" aria-hidden="true"></i>
+      <% end %>
+  </h1>
+  <h1 class="title">New payment</h1>
+</div>
+
+<%= render "form", payment: @payment, categories: @categories %>
