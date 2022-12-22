@@ -20,11 +20,6 @@
 
 /* @import "font-awesome"; */
 
-@font-face {
-  font-family: "Proxima-Nova";
-  src: url("../fonts/Proxima.otf");
-}
-
 * {
   margin: 0;
   padding: 0;
