@@ -195,7 +195,7 @@
   align-items: center;
 
   &:hover {
-    background: #FBD1A2;
+    background: #fbd1a2;
   }
 }
 
@@ -264,7 +264,7 @@
       margin-left: auto;
       margin-right: auto;
       border: 2px solid #fff;
-      border-radius: 10px;  
+      border-radius: 10px;
       font-size: 16px;
 
       .category-btn {
@@ -306,13 +306,12 @@
     width: 50%;
     font-size: 16px;
     border: 2px solid #fff;
-    border-radius: 10px; 
+    border-radius: 10px;
     margin-left: auto;
     margin-right: auto;
 
     .payment-btn {
       font-size: 18px;
+    }
   }
-}
-
 }

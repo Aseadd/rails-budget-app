@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe 'splash/index.html.erb', type: :feature do
-  
   describe 'index page' do
     before do
       visit splash_index_path
