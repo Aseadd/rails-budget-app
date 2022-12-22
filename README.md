@@ -123,7 +123,7 @@ Clone this repository to your desired folder:
 
 Example commands:
 ```sh
-  git clone git@github.com:carlosmuerto/rails_budget_app.git
+  git clone git@github.com:Aseadd/rails_budget_app.git
   cd rails_budget_app
 ```
 
