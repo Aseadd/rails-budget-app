@@ -52,6 +52,9 @@ gem 'bootsnap', require: false
 # Use Sass to process CSS
 # gem "sassc-rails"
 
+# use devise
+gem 'devise'
+
 # font-awesome
 gem 'font-awesome-sass'
 
@@ -65,7 +68,6 @@ group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'capybara'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
-  gem 'devise'
   gem 'rspec-rails'
 end
 
