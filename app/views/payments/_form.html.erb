@@ -1,0 +1,34 @@
+<%= stylesheet_link_tag "signup"%>
+<div class="form">
+<%= form_with(model: payment) do |form| %>
+  <% if payment.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(payment.errors.count, "error") %> prohibited this payment from being saved:</h2>
+
+      <ul>
+        <% payment.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name, requred: true, class: "form-input" %>
+  </div>
+
+  <div>
+    <%= form.label :amount, style: "display: block" %>
+    <%= form.text_field :amount, requred: true, class: "form-input" %>
+  </div>
+
+  <div>
+    <%= form.label :category_id, style: "display: block" %>
+    <%= form.select :category_id, options_for_select(categories.map{|c| [c.name, c.id]}, categories.first.id)%>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+</div>

@@ -1,0 +1,17 @@
+<%= stylesheet_link_tag "payment"%>
+<p style="color: green"><%= notice %></p>
+
+<%= render @payment %>
+
+
+    <br>
+
+    <%= link_to "New payment", new_payment_path %>
+  <% end %>
+
+<div>
+  <%= link_to "Edit this payment", edit_payment_path(@payment) %> |
+  <%= link_to "Back to payments", payments_path %>
+
+  <%= button_to "Destroy this payment", @payment, method: :delete %>
+</div>
